@@ -1,5 +1,7 @@
 # Semáforo_ensino_infantil
 
+## Baixe a aplicação para seu computador e abra o arquivo com o seu navegador.
+
 ![image](https://github.com/claudioares/sem-foro_ensino_infantil/assets/95495192/649c169b-8c7f-46f9-aaef-58fc5cc5c426)
 
 ![image](https://github.com/claudioares/sem-foro_ensino_infantil/assets/95495192/b5712ee0-1fd3-4770-a9a0-417605cecb20)
