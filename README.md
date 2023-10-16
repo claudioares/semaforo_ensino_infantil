@@ -1,6 +1,6 @@
 # Semáforo_ensino_infantil
 
-## Baixe a aplicação para seu computador e abra o arquivo com o seu navegador.
+## Baixe a aplicação para seu computador, descompacte o arquivo e abra com o seu navegador.
 
 ### Clique em code => download zip
 
