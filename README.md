@@ -1,4 +1,4 @@
-# sem-foro_ensino_infantil
+# Semáforo_ensino_infantil
 
 ![image](https://github.com/claudioares/sem-foro_ensino_infantil/assets/95495192/649c169b-8c7f-46f9-aaef-58fc5cc5c426)
 
