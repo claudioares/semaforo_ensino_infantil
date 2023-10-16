@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>desafio</title>
+
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100vh;
+
+            background-color: #232323;
+            color: white;
+
+            gap: 40px;
+        }
+        .container{
+            background-color: rgb(26, 29, 31);
+            flex-direction: column-reverse;
+
+            width: 200px;
+            height: 400px;
+
+            border: 1px solid white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            gap: 10px;
+        }
+
+        .div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100px;
+            height: 100px;
+
+            border-radius: 50%;
+
+            cursor: pointer;
+        }
+        .div:hover{
+            opacity: 0.9;
+        }
+        .verde{
+            background-color: green;
+        }
+        .amarelo{
+            background-color: yellow;
+        }
+        .vermelho{
+            background-color: red;
+        }
+        .opacity{
+            opacity: 0.5;
+        }
+        .significado_cores{
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 400px;
+            height: 400px;
+
+            padding: 12px;
+
+            border: 1px solid wheat;
+
+        }
+        .significado_cores p{
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div verde opacity">Verde</div>
+        <div class="div amarelo opacity">Amarelo</div>
+        <div class="div vermelho opacity">Vermelo</div>
+    </div>
+
+    <div class="significado_cores">
+        <p>Siguinificado das cores</p>
+    </div>
+    
+
+
+    <script>
+        const verde = document.querySelector(".verde")
+        const amarelo = document.querySelector(".amarelo")
+        const vermelho = document.querySelector(".vermelho")
+        const container = document.querySelector('.container')
+        const descriçãoCores = document.querySelector('.significado_cores p')
+
+
+        const contextoDasCores = {
+            vermelho: `A cor vermelha é a que aparece no topo do semáforo, 
+            em destaque, para que os condutores e os pedestres possam entender que, 
+            naquele instante e durante alguns segundos contínuos, o cruzamento está impedido. 
+            Nesta situação, todos devem aguardar o sinal verde, que permite a passagem e a continuação do fluxo.`,
+
+            amarelo: `Quando o semáforo está com a luz amarela 
+            acesa é preciso ter atenção: 
+            esta comunicação significa que a passagem está prestes a ser fechada. 
+            O sinal amarelo costuma ser utilizado para o trafego de veículos, apenas. 
+            À noite (sobretudo, de madrugada) é bastante comum que as luzes 
+            amarelas dos semáforos fiquem piscando, o que indica que o condutor deve 
+            trafegar com cuidado e com velocidade reduzida.Os condutores costumam evitar
+            que seus veículos fiquem parados no sinal vermelho de madrugada, 
+            devido à chance de assaltos, desrespeitando esta comunicação. 
+            Por isso que neste horário é comum vermos semáforos piscando as 
+            luzes amarelas.`,
+
+            verde: `Finalmente, a cor verde encontra-se na 
+            posição mais baixa do semáforo, indicando que o 
+            cruzamento em questão está livre para passagem. 
+            Caso o sinal verde esteja piscando, 
+            isso significa que está antecedendo o sinal amarelo contínuo.`
+        }
+
+
+        container.addEventListener('click', (event)=>{
+            event.preventDefault()
+
+            const color = event.target.classList[1]
+            const statusOpacity = event.target.classList[2]
+           
+
+
+            if(color === 'verde'){
+                statusOpacity ? verde.classList.remove('opacity') : verde.classList.add('opacity')
+                amarelo.classList.add('opacity')
+                vermelho.classList.add('opacity')
+
+                statusOpacity ? descriçãoCores.innerHTML = contextoDasCores.verde :  descriçãoCores.innerHTML = "Significado das cores"
+               
+            }
+
+            if(color === 'amarelo'){
+                statusOpacity ? amarelo.classList.remove('opacity') : amarelo.classList.add('opacity')
+                verde.classList.add('opacity')
+                vermelho.classList.add('opacity')
+
+                statusOpacity ? descriçãoCores.innerHTML = contextoDasCores.amarelo :  descriçãoCores.innerHTML = "Significado das cores"
+            }
+
+            if(color === 'vermelho'){
+                statusOpacity ? vermelho.classList.remove('opacity') : vermelho.classList.add('opacity')
+                verde.classList.add('opacity')
+                amarelo.classList.add('opacity')
+
+
+                statusOpacity ? descriçãoCores.innerHTML = contextoDasCores.vermelho :  descriçãoCores.innerHTML = "Significado das cores"
+            }
+
+
+        })
+
+    </script>
+</body>
+</html>
